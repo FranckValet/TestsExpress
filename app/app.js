@@ -39,8 +39,13 @@ app.get('/', (req, res) => {
     res.send(recettes)
 })
 
+// Retourne une recette d'après son ID
+.get('/recettes/:id', (req, res) => {
+    res.send(recettes[req.params.id])
+})
+
 // Code lancé au démarrage de l'app
-app.listen(port, () => {
+.listen(port, () => {
     // Utiliser ` ` comme quotes permet d'intégrer à tout moment dans la string du javascript entouré de ${ ... }
     console.log(`Example app listening at http://localhost:${port}`)
 })
