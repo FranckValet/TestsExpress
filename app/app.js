@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 })
 
 // Retourne la liste des recettes
-app.get('/recettes', (req, res) => {
+.get('/recettes', (req, res) => {
     res.send(recettes)
 })
 
